@@ -1,13 +1,20 @@
-resource "aws_eks_node_group" "nodes-general" {
+resource "aws_eks_node_group" "nodes_general" {
   cluster_name    = aws_eks_cluster.eks.name
-  node_group_name = "eks-node-group-general"
+  node_group_name = "nodes-general"
 
-  node_role_arn   = aws_iam_role.cluster_role.arn
-  subnet_ids      = aws_subnet.example[*].id
+  node_role_arn   = aws_iam_role.nodes_general.arn
+  # will use only the private subnets fro the workers and the public subnet for LB
+  subnet_ids      = [
+      aws_subnet.private_1.id,
+      aws_subnet.private_2.id
+  ]
 
   scaling_config {
+    # Desired number of worker nodes
     desired_size = 1
+    # Maximum number of worker nodes
     max_size     = 1
+    # Minimum number of worker nodes
     min_size     = 1
   }
 
