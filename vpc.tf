@@ -13,3 +13,11 @@ resource "aws_vpc" "eks" {
     Name = "eks"
   }
 }
+
+output "vpc_id" {
+  value = aws_vpc.eks.id
+  description = "VPC id."
+  
+  # Setting an output value as sensitive prevents Terraform from showing its value in plan and apply
+  sensitive = false
+}
