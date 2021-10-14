@@ -5,7 +5,7 @@ Creates EKS cluster from scratch.
 Note: You need to create your own backend for the tfstate file.
 Repalce the `backend.tf` file with yours.
 
-Also make sure your aws cli credentials have the permissions for the EKS cluster.
+Also make sure your aws cli credentials have the permissions to create the EKS cluster. (IAM create user and Role)
 
 ```
 git clone https://github.com/danfmihai/aws-terraform-eks.git
