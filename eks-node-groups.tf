@@ -18,9 +18,21 @@ resource "aws_eks_node_group" "nodes_general" {
     min_size     = 1
   }
 
-  update_config {
-    max_unavailable = 2
+  capacity_type = "SPOT"
+  instance_types = "t2.micro"
+  # Force version update if existing pods are unable to be drained due to a pod disruption budget issue.
+  force_update_version = false
+  
+  labels = {
+    "role" = "nodes-general"
   }
+
+  # Kubernetes version
+  version = "1.21"
+
+#   update_config {
+#     max_unavailable = 2
+#   }
 
   # Ensure that IAM Role permissions are created before and deleted after EKS Node Group handling.
   # Otherwise, EKS will not be able to properly delete EC2 Instances and Elastic Network Interfaces.
