@@ -24,7 +24,7 @@ spec:
         - containerPort: 80
 
 ---
-
+# Internal load balancer
 apiVersion: v1
 kind: Service
 metadata:
@@ -43,7 +43,7 @@ spec:
     app: nginx
 
 ---
-
+# External load balancer
 apiVersion: v1
 kind: Service
 metadata:
