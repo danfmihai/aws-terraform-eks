@@ -40,12 +40,16 @@ it will change the context to the new EKS cluster.
 
 
 ## Troubleshooting
-If you get the error: "error: You must be logged in to the server (Unauthorized)":
+- If you get the error: "error: You must be logged in to the server (Unauthorized)":
 
-You need to use the same user credentials to access th cluster when you created it with Terraform or have the user who created the cluster add you as a user with permissions.
+    You need to use the same user credentials to access th cluster when you created it with Terraform or have the user who created the cluster add you as a user with permissions.
 
-Find more details here:
-https://aws.amazon.com/premiumsupport/knowledge-center/eks-api-server-unauthorized-error/
+    Find more details here:
+    https://aws.amazon.com/premiumsupport/knowledge-center/eks-api-server-unauthorized-error/
+
+- If you get the "Error syncing load balancer: failed to ensure load balancer: could not find any suitable subnets for creating the ELB"  you should check if your labels in subnets are correct. Make sure you cluster name is correct in the labels. 
+    ex: "kubernetes.io/cluster/my-eks-cluster" = "shared"
+
 
 ## Load Balancer
 In the testing app which is just a webserver/nginx is also created a NLB.
