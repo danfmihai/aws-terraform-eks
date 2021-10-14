@@ -1,7 +1,6 @@
-# aws-terraform-eks
-Create EKS cluster from scratch.
+# EKS with Terraform
 
-Create the cluster:
+Creates EKS cluster from scratch.
 
 Note: You need to create your own backend for the tfstate file.
 Repalce the `backend.tf` file with yours.
