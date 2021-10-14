@@ -45,3 +45,12 @@ You need to use the same user credentials to access th cluster when you created 
 
 Find more details here:
 https://aws.amazon.com/premiumsupport/knowledge-center/eks-api-server-unauthorized-error/
+
+## Load Balancer
+In the testing app which is just a webserver/nginx is created a NLB
+
+For the Network Load Balancer check references:
+https://docs.aws.amazon.com/eks/latest/userguide/network-load-balancing.html#network-load-balancing-service-sample-manifest
+https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
+
+
