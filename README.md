@@ -61,7 +61,9 @@ service/internal-nginx-service created
 ```
 
 For the Network Load Balancer check references:
+
 https://docs.aws.amazon.com/eks/latest/userguide/network-load-balancing.html#network-load-balancing-service-sample-manifest
+
 https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
 
 

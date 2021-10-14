@@ -10,8 +10,8 @@ resource "aws_subnet" "public_1" {
     Name = "eks-public-us-east-1a"
     # Mandatory tags for kubernetes. Amazon EKS does not add the 
     # tag to subnets passed in when creating 1.19 clusters
-    "kubernetes.io/cluster/eks" = "shared"
-    "kubernetes.io/role/elb"    = 1
+    "kubernetes.io/cluster/my-eks-cluster" = "shared"
+    "kubernetes.io/role/elb"               = 1
   }
 }
 
@@ -27,8 +27,8 @@ resource "aws_subnet" "public_2" {
     Name = "eks-public-us-east-1b"
     # Mandatory tags for kubernetes. Amazon EKS does not add the 
     # tag to subnets passed in when creating 1.19 clusters
-    "kubernetes.io/cluster/eks" = "shared"
-    "kubernetes.io/role/elb"    = 1
+    "kubernetes.io/cluster/my-eks-cluster" = "shared"
+    "kubernetes.io/role/elb"               = 1
   }
 }
 
@@ -42,8 +42,8 @@ resource "aws_subnet" "private_1" {
     Name = "eks-private-us-east-1a"
     # Mandatory tags for kubernetes. Amazon EKS does not add the 
     # tag to subnets passed in when creating 1.19 clusters
-    "kubernetes.io/cluster/eks"       = "shared"
-    "kubernetes.io/role/internal-elb" = 1
+    "kubernetes.io/cluster/my-eks-cluster" = "shared"
+    "kubernetes.io/role/internal-elb"      = 1
   }
 }
 
@@ -56,7 +56,7 @@ resource "aws_subnet" "private_2" {
     Name = "eks-private-us-east-1b"
     # Mandatory tags for kubernetes. Amazon EKS does not add the 
     # tag to subnets passed in when creating 1.19 clusters
-    "kubernetes.io/cluster/eks"       = "shared"
-    "kubernetes.io/role/internal-elb" = 1
+    "kubernetes.io/cluster/my-eks-cluster" = "shared"
+    "kubernetes.io/role/internal-elb"      = 1
   }
 }
