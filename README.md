@@ -16,6 +16,8 @@ terraform apply
 
 ```
 
+[![EKS-with-2-pub-2-priv-subnets-2-LB.jpg](https://i.postimg.cc/mrCkjsfS/EKS-with-2-pub-2-priv-subnets-2-LB.jpg)](https://postimg.cc/d7QJQg07)
+
 ## Summary
 This creates:
 - VPC
