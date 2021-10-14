@@ -27,7 +27,7 @@ This creates:
 - 3 routing tables (1 for public, 2 for private)
 - EKS cluster 
 - EKS node(s) - using t2.micro and SPOT instances
-- add label to the node(s) "role" = "nodes-general"
+- adds label to the node(s) "role" = "nodes-general"
 
 
 To be able to connect to the Cluster issue the following command:
